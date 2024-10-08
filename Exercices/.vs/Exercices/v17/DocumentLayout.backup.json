@@ -1,0 +1,108 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\wgiron\\source\\repos\\Exercices\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\wgiron\\source\\repos\\Exercices\\Exercices\\Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Exercices\\Entity.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\wgiron\\source\\repos\\Exercices\\Exercices\\Vector.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Exercices\\Vector.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\wgiron\\source\\repos\\Exercices\\Exercices\\Vector.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Exercices\\Vector.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\wgiron\\source\\repos\\Exercices\\Exercices\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Exercices\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\wgiron\\source\\repos\\Exercices\\Exercices\\Entity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Exercices\\Entity.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 201,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Entity.h",
+              "DocumentMoniker": "C:\\Users\\wgiron\\source\\repos\\Exercices\\Exercices\\Entity.h",
+              "RelativeDocumentMoniker": "Exercices\\Entity.h",
+              "ToolTip": "C:\\Users\\wgiron\\source\\repos\\Exercices\\Exercices\\Entity.h",
+              "RelativeToolTip": "Exercices\\Entity.h",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-08T08:31:24.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Vector.h",
+              "DocumentMoniker": "C:\\Users\\wgiron\\source\\repos\\Exercices\\Exercices\\Vector.h",
+              "RelativeDocumentMoniker": "Exercices\\Vector.h",
+              "ToolTip": "C:\\Users\\wgiron\\source\\repos\\Exercices\\Exercices\\Vector.h",
+              "RelativeToolTip": "Exercices\\Vector.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-10-08T07:59:06.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Vector.cpp",
+              "DocumentMoniker": "C:\\Users\\wgiron\\source\\repos\\Exercices\\Exercices\\Vector.cpp",
+              "RelativeDocumentMoniker": "Exercices\\Vector.cpp",
+              "ToolTip": "C:\\Users\\wgiron\\source\\repos\\Exercices\\Exercices\\Vector.cpp",
+              "RelativeToolTip": "Exercices\\Vector.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-08T07:59:17.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Main.cpp",
+              "DocumentMoniker": "C:\\Users\\wgiron\\source\\repos\\Exercices\\Exercices\\Main.cpp",
+              "RelativeDocumentMoniker": "Exercices\\Main.cpp",
+              "ToolTip": "C:\\Users\\wgiron\\source\\repos\\Exercices\\Exercices\\Main.cpp",
+              "RelativeToolTip": "Exercices\\Main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-08T07:56:46.026Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 199,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Entity.cpp",
+              "DocumentMoniker": "C:\\Users\\wgiron\\source\\repos\\Exercices\\Exercices\\Entity.cpp",
+              "RelativeDocumentMoniker": "Exercices\\Entity.cpp",
+              "ToolTip": "C:\\Users\\wgiron\\source\\repos\\Exercices\\Exercices\\Entity.cpp",
+              "RelativeToolTip": "Exercices\\Entity.cpp",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-10-08T08:30:57.998Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
