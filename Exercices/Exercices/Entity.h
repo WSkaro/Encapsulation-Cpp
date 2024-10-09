@@ -8,11 +8,11 @@ protected:
 	float Speed;
 
 public:
-	AMovable();
+	AMovable(Vector2&);
 
-	virtual void SetDirection(Vector2 direction);
+	virtual void SetDirection(Vector2& direction);
 	virtual void SetSpeed(float speed);
-	virtual void Move(Vector2 direction, float speed) = 0;
+	virtual void Move(Vector2& direction, float speed) = 0;
 };
 
 
@@ -22,11 +22,11 @@ protected:
 	float Hp;
 
 public:
-	Alive();
+	Alive(float);
 
-	float GetMaxHp();
-	float GetHp();
-	void TakeDamage(float dmg);
+	virtual float GetMaxHp();
+	virtual float GetHp();
+	virtual void TakeDamage(float dmg);
 };
 
 
@@ -41,16 +41,32 @@ protected:
 	Vector2 Position;
 
 public:
-	Entity(float, float);
+	Entity(Vector2&);
 
-	virtual void SetPos(Vector2 position);
+	virtual void SetPos(Vector2& position);
 	virtual Vector2 GetPos();
 };
 
 
 class StaticObject : public Entity {
 public:
-	StaticObject(float, float);
+	StaticObject(Vector2&);
+};
+
+
+class BreakableObject : public Entity, public Alive {
+public:
+	BreakableObject(Vector2&, float maxhp);
+
+	void TakeDamage(float dmg) override;
+};
+
+
+class Mob : public Entity, public Alive, public AMovable {
+public:
+	Mob(Vector2&, Vector2&, float);
+
+	void TakeDamage(float dmg) override;
 };
 
 #endif

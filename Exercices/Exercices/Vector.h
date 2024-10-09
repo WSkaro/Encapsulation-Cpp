@@ -11,9 +11,11 @@ public:
 
 	void SetX(float _x);
 	void SetY(float _y);
-	float GetX();
-	float GetY();
+	float GetX() const;
+	float GetY() const;
 	void Print();
+
+	Vector2 operator + (const Vector2& _right);
 };
 
 #endif

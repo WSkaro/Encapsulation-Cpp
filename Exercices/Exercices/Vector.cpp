@@ -12,11 +12,11 @@ void Vector2::SetY(float _y) {
 	y = _y;
 }
 
-float Vector2::GetX() {
+float Vector2::GetX() const {
 	return x;
 }
 
-float Vector2::GetY() {
+float Vector2::GetY() const {
 	return y;
 }
 
@@ -27,4 +27,10 @@ void Vector2::Print() {
 	std::string str = stringvec.str();
 
 	std::cout << str;
+}
+
+Vector2 Vector2::operator+(const Vector2& _right) {
+	Vector2 tmp(this->x + _right.GetX(), this->y + _right.GetY());
+
+	return tmp;
 }
