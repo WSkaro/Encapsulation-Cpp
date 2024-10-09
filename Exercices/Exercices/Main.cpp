@@ -6,7 +6,5 @@ int main(int argc, char* argv[]) {
 
 	vector.Print();
 
-
-
 	return 0;
 }
