@@ -1,9 +1,4 @@
-﻿  Entity.cpp
-C:\Users\wgiron\OneDrive\Secrétaire\GitHub\Encapsulation-Cpp\Exercices\Exercices\Entity.cpp(35,14): error C2511: 'void Entity::SetPos(Vector2)' : impossible de trouver la fonction membre surchargée dans 'Entity'
-      C:\Users\wgiron\OneDrive\Secrétaire\GitHub\Encapsulation-Cpp\Exercices\Exercices\Entity.h(39,7):
-      voir la déclaration de 'Entity'
-  
-C:\Users\wgiron\OneDrive\Secrétaire\GitHub\Encapsulation-Cpp\Exercices\Exercices\Entity.cpp(36,2): error C2597: référence non conforme à un membre non static 'Entity::Position'
-      C:\Users\wgiron\OneDrive\Secrétaire\GitHub\Encapsulation-Cpp\Exercices\Exercices\Entity.h(41,10):
-      voir la déclaration de 'Entity::Position'
-  
+﻿  Main.cpp
+  Exercices.vcxproj -> C:\Users\wgiron\OneDrive\Secrétaire\GitHub\Encapsulation-Cpp\Exercices\x64\Debug\Exercices.exe
+  'pwsh.exe' n'est pas reconnu en tant que commande interne
+  ou externe, un programme exécutable ou un fichier de commandes.

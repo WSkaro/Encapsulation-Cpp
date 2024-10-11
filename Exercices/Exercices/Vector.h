@@ -15,7 +15,8 @@ public:
 	float GetY() const;
 	void Print();
 
-	Vector2 operator + (const Vector2& _right);
+	Vector2 operator + (const Vector2& _other);
+	Vector2* operator += (const Vector2& _other);
 };
 
 #endif

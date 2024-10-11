@@ -29,8 +29,14 @@ void Vector2::Print() {
 	std::cout << str;
 }
 
-Vector2 Vector2::operator+(const Vector2& _right) {
-	Vector2 tmp(this->x + _right.GetX(), this->y + _right.GetY());
+Vector2 Vector2::operator + (const Vector2& _other) {
+	Vector2 tmp(this->x + _other.GetX(), this->y + _other.GetY());
+
+	return tmp;
+}
+
+Vector2* Vector2::operator += (const Vector2& _other) {
+	Vector2* tmp = new Vector2(this->x += _other.GetX(), this->y += _other.GetY());
 
 	return tmp;
 }

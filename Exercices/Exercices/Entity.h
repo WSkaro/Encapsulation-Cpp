@@ -1,6 +1,7 @@
 #ifndef ENTITY_H__
 #define ENTITY_H__
 #include "Vector.h"
+#include <iostream>
 
 class AMovable {
 protected:
@@ -10,9 +11,9 @@ protected:
 public:
 	AMovable(Vector2&);
 
-	virtual void SetDirection(Vector2& direction);
-	virtual void SetSpeed(float speed);
-	virtual void Move(Vector2& direction, float speed) = 0;
+	virtual void SetDirection(Vector2&);
+	virtual void SetSpeed(float);
+	virtual void Move(Vector2&, float) = 0;
 };
 
 
@@ -20,19 +21,21 @@ class Alive {
 protected:
 	float MaxHp;
 	float Hp;
+	std::string Name;
 
 public:
-	Alive(float);
+	Alive(float, std::string);
 
 	virtual float GetMaxHp();
 	virtual float GetHp();
-	virtual void TakeDamage(float dmg);
+	virtual void TakeDamage(float);
+	virtual std::string GetName();
 };
 
 
 class IAttacker {
 public:
-	virtual void Attack(Alive* alive) = 0;
+	virtual void Attack(Alive*) = 0;
 };
 
 
@@ -43,7 +46,7 @@ protected:
 public:
 	Entity(Vector2&);
 
-	virtual void SetPos(Vector2& position);
+	virtual void SetPos(Vector2&);
 	virtual Vector2 GetPos();
 };
 
@@ -56,9 +59,9 @@ public:
 
 class BreakableObject : public Entity, public Alive {
 public:
-	BreakableObject(Vector2&, float maxhp);
+	BreakableObject(Vector2&, float);
 
-	void TakeDamage(float dmg) override;
+	void TakeDamage(float) override;
 };
 
 
@@ -66,7 +69,18 @@ class Mob : public Entity, public Alive, public AMovable {
 public:
 	Mob(Vector2&, Vector2&, float);
 
-	void TakeDamage(float dmg) override;
+	void TakeDamage(float) override;
+	void Move(Vector2&, float) override;
+};
+
+
+class Player : public Entity, public Alive, public AMovable, public IAttacker {
+public:
+	Player(Vector2&, Vector2&, float);
+
+	void TakeDamage(float) override;
+	void Move(Vector2&, float) override;
+	void Attack(Alive*) override;
 };
 
 #endif
