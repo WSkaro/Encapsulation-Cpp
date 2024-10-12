@@ -8,10 +8,7 @@ public:
 	std::vector<Entity*> Entities;
 
 	void Init();
-	void Step();
-
-
-
+	int Step();
 };
 
 #endif

@@ -1,7 +1,7 @@
 #include "Entity.h"
 
 //AMovable construct
-AMovable::AMovable(Vector2& vector) : Direction(vector), Speed(0.f) {};
+AMovable::AMovable(Vector2& vector, float speed) : Direction(vector), Speed(speed) {};
 
 void AMovable::SetDirection(Vector2& direction) {
 	Direction = direction;
@@ -78,8 +78,8 @@ void BreakableObject::TakeDamage(float dmg) {
 
 
 //Mob construct
-Mob::Mob(Vector2& position, Vector2& direction, float maxhp) :
-	Entity(position), AMovable(direction), Alive(maxhp, "Mob") {
+Mob::Mob(Vector2& position, Vector2& direction, float speed, float maxhp) :
+	Entity(position), AMovable(direction, speed), Alive(maxhp, "Mob") {
 	std::cout << "mob just created at x = " << position.GetX() 
 		<< " and y = " << position.GetY() 
 		<< " with " << maxhp 
@@ -101,15 +101,15 @@ void Mob::TakeDamage(float dmg) {
 }
 
 void Mob::Move(Vector2& direction, float speed) {
-	Position += direction; //*speed
+	Position += direction * speed; 
 	std::cout << "Mob moved to x = " << Position.GetX()
 		<< " and y = " << Position.GetY() << std::endl;
 }
 
 
 //Player construct
-Player::Player(Vector2& position, Vector2& direction, float maxhp) :
-	Entity(position), AMovable(direction), Alive(maxhp, "Player") {
+Player::Player(Vector2& position, Vector2& direction, float speed, float maxhp) :
+	Entity(position), AMovable(direction, speed), Alive(maxhp, "Player") {
 	std::cout << "Player just created at x = " << position.GetX()
 		<< " and y = " << position.GetY()
 		<< " with " << maxhp
@@ -131,7 +131,7 @@ void Player::TakeDamage(float dmg) {
 }
 
 void Player::Move(Vector2& direction, float speed) {
-	Position += direction; //*speed
+	Position += direction * speed;
 	std::cout << "Player moved to x = " << Position.GetX()
 		<< " and y = " << Position.GetY() << std::endl;
 }

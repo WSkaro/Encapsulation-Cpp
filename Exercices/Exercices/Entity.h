@@ -9,11 +9,11 @@ protected:
 	float Speed;
 
 public:
-	AMovable(Vector2&);
+	AMovable(Vector2& direction, float speed);
 
-	virtual void SetDirection(Vector2&);
-	virtual void SetSpeed(float);
-	virtual void Move(Vector2&, float) = 0;
+	virtual void SetDirection(Vector2& direction);
+	virtual void SetSpeed(float speed);
+	virtual void Move(Vector2& direction, float speed) = 0;
 };
 
 
@@ -24,18 +24,18 @@ protected:
 	std::string Name;
 
 public:
-	Alive(float, std::string);
+	Alive(float Hp, std::string Name);
 
 	virtual float GetMaxHp();
 	virtual float GetHp();
-	virtual void TakeDamage(float);
+	virtual void TakeDamage(float damage);
 	virtual std::string GetName();
 };
 
 
 class IAttacker {
 public:
-	virtual void Attack(Alive*) = 0;
+	virtual void Attack(Alive* alive) = 0;
 };
 
 
@@ -44,43 +44,43 @@ protected:
 	Vector2 Position;
 
 public:
-	Entity(Vector2&);
+	Entity(Vector2& position);
 
-	virtual void SetPos(Vector2&);
+	virtual void SetPos(Vector2& position);
 	virtual Vector2 GetPos();
 };
 
 
 class StaticObject : public Entity {
 public:
-	StaticObject(Vector2&);
+	StaticObject(Vector2& position);
 };
 
 
 class BreakableObject : public Entity, public Alive {
 public:
-	BreakableObject(Vector2&, float);
+	BreakableObject(Vector2& position, float hp);
 
-	void TakeDamage(float) override;
+	void TakeDamage(float damage) override;
 };
 
 
 class Mob : public Entity, public Alive, public AMovable {
 public:
-	Mob(Vector2&, Vector2&, float);
+	Mob(Vector2& position, Vector2& direction, float speed, float hp);
 
-	void TakeDamage(float) override;
-	void Move(Vector2&, float) override;
+	void TakeDamage(float damage) override;
+	void Move(Vector2& direction, float speed) override;
 };
 
 
 class Player : public Entity, public Alive, public AMovable, public IAttacker {
 public:
-	Player(Vector2&, Vector2&, float);
+	Player(Vector2& position, Vector2& direction, float speed, float hp);
 
-	void TakeDamage(float) override;
-	void Move(Vector2&, float) override;
-	void Attack(Alive*) override;
+	void TakeDamage(float damage) override;
+	void Move(Vector2& direction, float speed) override;
+	void Attack(Alive* alive) override;
 };
 
 #endif

@@ -40,3 +40,9 @@ Vector2* Vector2::operator += (const Vector2& _other) {
 
 	return tmp;
 }
+
+Vector2 Vector2::operator * (const float _other) {
+	Vector2 tmp = Vector2(this->x * _other, this->y * _other);
+
+	return tmp;
+}
