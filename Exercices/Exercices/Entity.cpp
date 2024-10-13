@@ -49,7 +49,7 @@ Vector2 Entity::GetPos() {
 StaticObject::StaticObject(Vector2& position) 
 	: Entity(position) {
 	std::cout << "Static Object just created at x = " << position.GetX() 
-		<< " and y = " << position.GetY() << std::endl;
+		<< " and y = " << position.GetY() << "\n" << std::endl;
 };
 
 
@@ -59,13 +59,13 @@ BreakableObject::BreakableObject(Vector2& position, float maxhp) :
 	std::cout << "Breakable Object just created at x = " << position.GetX() 
 		<< " and y = " << position.GetY() 
 		<< " with " << maxhp 
-		<< " HP" << std::endl;
+		<< " HP" << "\n" << std::endl;
 };
 
 void BreakableObject::TakeDamage(float dmg) {
 	Alive::TakeDamage(dmg);
 
-	if (Hp == 0) {
+	if (Hp <= 0) {
 		std::cout << "Breakable Object just took " << dmg 
 			<< " damage and broke." << std::endl;
 	}
@@ -84,12 +84,12 @@ Mob::Mob(Vector2& position, Vector2& direction, float speed, float maxhp) :
 		<< " and y = " << position.GetY() 
 		<< " with " << maxhp 
 		<< " HP, with direction x = " << direction.GetX() 
-		<< " and direction y = " << direction.GetY() << std::endl;
+		<< " and direction y = " << direction.GetY() << "\n" << std::endl;
 }
 
 void Mob::TakeDamage(float dmg) {
 	Alive::TakeDamage(dmg);
-	if (Hp == 0) {
+	if (Hp <= 0) {
 		std::cout << "Mob just took " << dmg
 			<< " damage and died." << std::endl;
 	}
@@ -101,9 +101,9 @@ void Mob::TakeDamage(float dmg) {
 }
 
 void Mob::Move(Vector2& direction, float speed) {
-	Position += direction * speed; 
+	Position += direction.normalize() * speed; 
 	std::cout << "Mob moved to x = " << Position.GetX()
-		<< " and y = " << Position.GetY() << std::endl;
+		<< " and y = " << Position.GetY() << "\n" << std::endl;
 }
 
 
@@ -114,7 +114,7 @@ Player::Player(Vector2& position, Vector2& direction, float speed, float maxhp) 
 		<< " and y = " << position.GetY()
 		<< " with " << maxhp
 		<< " HP, with direction x = " << direction.GetX()
-		<< " and direction y = " << direction.GetY() << std::endl;
+		<< " and direction y = " << direction.GetY() << "\n" << std::endl;
 }
 
 void Player::TakeDamage(float dmg) {
@@ -131,12 +131,12 @@ void Player::TakeDamage(float dmg) {
 }
 
 void Player::Move(Vector2& direction, float speed) {
-	Position += direction * speed;
+	Position += direction.normalize() * speed;
 	std::cout << "Player moved to x = " << Position.GetX()
-		<< " and y = " << Position.GetY() << std::endl;
+		<< " and y = " << Position.GetY() << "\n" << std::endl;
 }
 
 void Player::Attack(Alive* alive) {
 	alive->TakeDamage(10);
-	std::cout << this->GetName() << " just attacked " << alive->GetName() << std::endl;
+	std::cout << this->GetName() << " just attacked " << alive->GetName() << "\n" << std::endl;
 }

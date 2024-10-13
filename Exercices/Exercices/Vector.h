@@ -1,5 +1,6 @@
 #ifndef VECTOR_H__
 #define VECTOR_H__
+#include <iostream>
 
 class Vector2 {
 private:
@@ -15,9 +16,13 @@ public:
 	float GetY() const;
 	void Print();
 
-	Vector2 operator + (const Vector2& _other);
-	Vector2* operator += (const Vector2& _other);
-	Vector2 operator * (const float _other); //Vector2 * float
+	Vector2 operator + (const Vector2& other) const;
+	Vector2* operator += (const Vector2& other);
+	Vector2 operator - (const Vector2& other) const;
+	Vector2 operator * (const float other) const; //Vector2 * float
+	float magnitude() const;
+	Vector2 normalize() const;
+	float distancesqrd(const Vector2& other);
 };
 
 #endif

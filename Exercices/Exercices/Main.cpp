@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Integer.h"
 #include "Entity.h"
+#include "World.h"
 
 int main(int argc, char* argv[]) {
 	
@@ -40,6 +41,12 @@ int main(int argc, char* argv[]) {
 	//player->TakeDamage(50);
 	//player->Attack(mob);
 	// TEST ====================
+
+	World* world = new World();
+	world->Init();
+
+	while (world->Step()) {};
+
 
 	return 0;
 }
